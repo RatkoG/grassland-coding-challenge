@@ -6,5 +6,5 @@ export abstract class Message {
     public readonly content: any
   ) {
   }
-
+abstract messageTypeName(): string;
 }

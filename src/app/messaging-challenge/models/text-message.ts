@@ -10,4 +10,7 @@ export class TextMessage extends Message {
     super(from, profilePictureUrl, content);
   }
 
+  messageTypeName(): string {
+    return 'TextMessage';
+  }
 }

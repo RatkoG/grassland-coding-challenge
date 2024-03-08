@@ -16,7 +16,7 @@ export class MessagingComponent {
 
   ngOnInit(): void {
     this.subscription = this.messagingService.messages$.subscribe((messages: Message[]) => {
-      this.messages = messages.filter(message => message instanceof TextMessage) as TextMessage[];
+      this.messages = messages
     });
   }
 
@@ -26,4 +26,7 @@ export class MessagingComponent {
     }
   }
 
+  getMessageType(message: Message): string {
+    return message.messageTypeName();
+  }
 }

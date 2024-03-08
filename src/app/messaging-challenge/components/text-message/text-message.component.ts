@@ -9,9 +9,4 @@ import { BaseMessageComponent } from '../base-message/base-message.component';
 })
 export class TextMessageComponent extends BaseMessageComponent  {
   @Input() message: TextMessage;
-  textSend: boolean;
- 
-  ngOnInit(): void {
-    this.textSend = this.message.from === 'Anna';
-  }
 }
