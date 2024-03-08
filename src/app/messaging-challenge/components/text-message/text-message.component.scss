@@ -1,0 +1,40 @@
+.message-row {
+  display: flex;
+  &.send {
+    justify-content: flex-end;
+
+    .message {
+      background-color: #4267b2;
+    }
+
+    .profile-picture {
+      margin-right: 8px;
+    }
+  }
+
+  &.receive {
+    .message {
+      background-color: #8d8e91;
+      order: 1;
+    }
+
+    .profile-picture {
+      margin-left: 8px;
+    }
+  }
+}
+
+.message {
+  font-size: 16px;
+  border-radius: 8px;
+  padding: 4px;
+  margin: 8px;
+}
+
+.profile-picture {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  align-self: flex-end;
+  margin-bottom: 8px;
+}

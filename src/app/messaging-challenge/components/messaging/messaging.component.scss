@@ -13,4 +13,6 @@
   flex-direction: column;
   overflow-y: scroll;
   border-radius: 16px;
+  // Just to give it a more realistic mobile look
+  justify-content: end;
 }
