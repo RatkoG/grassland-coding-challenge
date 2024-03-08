@@ -1,7 +1,9 @@
 <div class="container">
   <div class="fake-phone">
     <div *ngFor="let message of messages">
-      <app-text-message [message]="message" ></app-text-message>
+      <ng-container *ngIf="message instanceof TextMessage">
+        <app-text-message [message]="message"></app-text-message>
+      </ng-container>
     </div>
   </div>
 </div>

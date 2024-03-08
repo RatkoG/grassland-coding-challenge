@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Message } from '../../models/message';
 import { MessagingService } from '../../services/messaging.service';
+import { TextMessage } from '../../models/text-message';
 
 @Component({
   selector: 'app-messaging',
@@ -15,7 +16,7 @@ export class MessagingComponent {
 
   ngOnInit(): void {
     this.subscription = this.messagingService.messages$.subscribe((messages: Message[]) => {
-      this.messages = messages;
+      this.messages = messages.filter(message => message instanceof TextMessage) as TextMessage[];
     });
   }
 
