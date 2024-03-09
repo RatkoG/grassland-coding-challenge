@@ -17,6 +17,9 @@ import {MessagingComponent} from './messaging-challenge/components/messaging/mes
 import {MatCardModule} from '@angular/material/card';
 import { TextMessageComponent } from './messaging-challenge/components/text-message/text-message.component';
 import { ImageMessageComponent } from './messaging-challenge/components/image-message/image-message.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   imports: [
@@ -33,7 +36,10 @@ import { ImageMessageComponent } from './messaging-challenge/components/image-me
     MatButtonModule,
     RouterModule,
     MatMenuModule,
-    MatCardModule
+    MatCardModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatSelectModule,
   ],
   declarations: [
     AppComponent,
