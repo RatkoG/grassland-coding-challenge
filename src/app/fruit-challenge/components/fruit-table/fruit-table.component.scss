@@ -9,3 +9,24 @@
   width: 100%;
   justify-content: center;
 }
+
+.bold-text {
+  font-weight: bold;
+}
+
+td:last-child {
+  text-align: right;
+}
+
+
+tr.mat-row.highlight-row {
+  background-color: #31BF5D;
+}
+
+.alternate-row:nth-child(even) {
+  background-color: #FAFAFA;
+}
+
+.alternate-row:nth-child(odd) {
+  background-color: #FFFFFF;
+}
