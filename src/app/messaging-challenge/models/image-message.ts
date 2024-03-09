@@ -9,5 +9,7 @@ export class ImageMessage extends Message {
   ) {
     super(from, profilePictureUrl, content);
   }
-
+  messageTypeName(): string {
+    return 'ImageMessage';
+  }
 }

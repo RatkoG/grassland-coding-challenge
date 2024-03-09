@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {of} from 'rxjs';
+import {concat, concatMap, delayWhen, from, map, of, scan, tap, timer, zip} from 'rxjs';
 import {TextMessage} from '../models/text-message';
 import {ImageMessage} from '../models/image-message';
 
@@ -22,6 +22,18 @@ export class MessagingService {
     ),
     new TextMessage('Bob', 'assets/person1.jpeg' ,'Wow! That\'s exciting! I can\'t wait to see what he looks like'),
     new ImageMessage('Anna', 'assets/person2.png', 'assets/dog.jpeg')
-  ])
-
+  ]).pipe(
+    concatMap((messages: (TextMessage | ImageMessage)[]) => {
+      return of(...messages)
+    }), 
+    concatMap((message: TextMessage | ImageMessage) => {
+      const delayTime = Math.floor(Math.random() * 4000) + 1000;
+      
+      return timer(delayTime).pipe(
+        map(() => message)
+      );
+    }), 
+    scan((acc, curr) => [...acc, curr], []),
+    map((messages) => messages)
+  );
 }

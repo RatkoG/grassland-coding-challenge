@@ -1,0 +1,5 @@
+<div class="message-row"
+  [ngClass]="textSend ? 'send' : 'receive'">
+  <div class="message">{{ message.content }}</div>
+  <img class="profile-picture" [src]="message.profilePictureUrl" [alt]="'Profile Picture ' + message.from">
+</div>

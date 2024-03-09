@@ -1,0 +1,36 @@
+.message-row {
+  display: flex;
+  &.send {
+    justify-content: flex-end;
+
+    .profile-picture {
+      margin-right: 8px;
+    }
+  }
+
+  &.receive {
+    .message-image-wrapper {
+      order: 1;
+    }
+
+    .profile-picture {
+      margin-left: 8px;
+    }
+  }
+}
+
+.profile-picture {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  align-self: flex-end;
+  margin-bottom: 8px;
+}
+
+.message-image-wrapper {
+  margin: 8px;
+} 
+.message-image {
+  width: 100%;
+  height: auto; 
+}
