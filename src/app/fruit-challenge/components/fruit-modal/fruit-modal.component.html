@@ -1,0 +1,18 @@
+<h2 mat-dialog-title class="dialog-title">{{ data.name }}</h2>
+<div mat-dialog-content class="dialog-content">
+  <p class="dialog-info">ID: {{ data.id }}</p>
+  <p class="dialog-info">Genus: {{ data.genus }}</p>
+  <p class="dialog-info">Family: {{ data.family }}</p>
+  <p class="dialog-info">Order: {{ data.order }}</p>
+  <p class="dialog-info">Nutrition:</p>
+  <ul>
+    <li class="dialog-nutrition">Carbohydrates: {{ data.nutritions.carbohydrates }}</li>
+    <li class="dialog-nutrition">Protein: {{ data.nutritions.protein }}</li>
+    <li class="dialog-nutrition">Fat: {{ data.nutritions.fat }}</li>
+    <li class="dialog-nutrition">Calories: {{ data.nutritions.calories }}</li>
+    <li class="dialog-nutrition">Sugar: {{ data.nutritions.sugar }}</li>
+  </ul>
+</div>
+<div mat-dialog-actions class="dialog-actions">
+  <button mat-button class="dialog-close-button" mat-dialog-close>Close</button>
+</div>

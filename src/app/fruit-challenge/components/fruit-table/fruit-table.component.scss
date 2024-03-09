@@ -23,6 +23,10 @@ tr.mat-row.highlight-row {
   background-color: #31BF5D;
 }
 
+.alternate-row {
+  cursor: pointer;
+}
+
 .alternate-row:nth-child(even) {
   background-color: #FAFAFA;
 }

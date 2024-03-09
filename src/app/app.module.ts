@@ -20,6 +20,8 @@ import { ImageMessageComponent } from './messaging-challenge/components/image-me
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
+import { MatDialogModule } from '@angular/material/dialog';
+import { FruitModalComponent } from './fruit-challenge/components/fruit-modal/fruit-modal.component';
 
 @NgModule({
   imports: [
@@ -40,12 +42,14 @@ import { MatSelectModule } from '@angular/material/select';
     MatInputModule,
     MatFormFieldModule,
     MatSelectModule,
+    MatDialogModule,
   ],
   declarations: [
     AppComponent,
     MessagingComponent,
     TextMessageComponent,
-    ImageMessageComponent
+    ImageMessageComponent,
+    FruitModalComponent
   ],
   providers: [
     {
